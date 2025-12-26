@@ -13,7 +13,10 @@ st.title("Bone Fractures CT Detection System")
 st.write("Upload your CT JPG image and get automatic lesion detection.")
 
 @st.cache_resource
-model = YOLO("Bone_YOLO.pt")
+def load_model():
+    return YOLO("YOLO.pt")
+
+model = load_model()
 
 #User Upload Image
 uploaded_file = st.file_uploader("Upload CT JPG Image", type=["jpg", "jpeg", "png"])
