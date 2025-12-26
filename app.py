@@ -14,7 +14,7 @@ st.write("Upload your CT JPG image and get automatic lesion detection.")
 
 @st.cache_resource
 def load_model():
-    return YOLO("YOLO.pt")
+    return YOLO("Bone_YOLO.pt")
 
 model = load_model()
 
